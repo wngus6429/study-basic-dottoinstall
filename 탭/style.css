@@ -1,0 +1,48 @@
+/** @format */
+body {
+  font-size: 14px;
+}
+.container {
+  margin: 30px auto;
+  width: 500px;
+}
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* 이걸로 인해 메뉴가 세로였던게 가로로 됨 */
+}
+.menu li a {
+  /* 메뉴에 간격을 주었음 */
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  padding: 8px 0;
+  /* 상하, 좌우 */
+  color: #333;
+  /* 파란색 이름이 바뀜 */
+  text-decoration: none;
+  /* 이걸로 메뉴 밑줄이 사라짐 */
+  border-radius: 4px 4px 0 0;
+}
+.menu li a.active {
+  background: #333;
+  color: #fff;
+}
+/* active가 아닌것들에 hover 했을 경우 */
+.menu li a:not(.active):hover {
+  opacity: 0.5;
+  transition: opacity;
+}
+.content.active {
+  background: #333;
+  color: #fff;
+  min-height: 150px;
+  padding: 12px;
+  display: block;
+  /* 액티브인 부분은 보이게 */
+}
+.content {
+  display: none;
+  /* 액티브가 아닌 부분은 안보이게 */
+}

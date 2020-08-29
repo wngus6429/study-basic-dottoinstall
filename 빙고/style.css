@@ -1,0 +1,14 @@
+/** @format */
+
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+th,
+td {
+  background: pink;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}

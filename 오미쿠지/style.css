@@ -1,0 +1,31 @@
+/** @format */
+
+body {
+  background: #efefef;
+}
+
+#btn {
+  width: 200px;
+  height: 200px;
+  background: red;
+  border-radius: 50%;
+  margin: 30px auto;
+  text-align: center;
+  line-height: 200px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 42px;
+  cursor: pointer;
+  box-shadow: 0 10px 0 #d1483d;
+  user-select: none;
+  /* 이거 안하면 안에 숫자가 블록 지정 처리되서 짜증남 */
+}
+
+#btn:hover {
+  opacity: 0.9;
+}
+/* 누르는 효과 */
+#btn:active {
+  box-shadow: 0 5px 0 #d1483d;
+  margin-top: 35px;
+}

@@ -1,0 +1,52 @@
+/** @format */
+body {
+  font-size: 14px;
+}
+#open,
+#close {
+  cursor: pointer;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  padding: 12px 0px;
+  margin: 16px auto 0;
+}
+#mask {
+  /* 화면을 회색으로 만들어준다. */
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+/* 마스크보다 모달이 위에 와야지 */
+/* 이걸 한 이유가 html section이 위로 와서 마스크가 위에 있음. */
+#modal {
+  background: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 4px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: transform 0.4s;
+  z-index: 2;
+}
+
+#modal > p {
+  margin: 0 0 20px;
+}
+
+#mask.hidden {
+  display: none;
+}
+
+#modal.hidden {
+  /* 위 -500 ㅋㅋㅋ */
+  transform: translate(0, -500px);
+}
